@@ -49,10 +49,10 @@ class CodesController extends Controller
         }//end if
 
         if (count($this->uniqueCodes) != $count) {
-            self::generateUniqueCodes($length, $count);
+            self::generateUniqueCodes($length, $count, $fileName);
         }//end if
 
-        Storage::put($fileName, implode("\n", $this->uniqueCodes));
+        Storage::put($fileName, implode(PHP_EOL, $this->uniqueCodes));
         return;
 
     }//end generateUniqueCodesArray()

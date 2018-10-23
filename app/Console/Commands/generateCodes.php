@@ -40,8 +40,8 @@ class generateCodes extends Command
     {
         $obj = new CodesController();
         $obj->generateUniqueCodes(
-            $this->option('numberOfCodes'),
             $this->option('lengthOfCode'),
+            $this->option('numberOfCodes'),
             $this->option('file')
         );
 
